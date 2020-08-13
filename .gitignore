@@ -37,6 +37,7 @@
 **/android/gradlew.bat
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
+#my additions
 **/android/app/google-services.json
 
 # iOS/XCode related
@@ -64,6 +65,10 @@
 **/ios/Flutter/flutter_assets/
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
+
+#my additions
+**/ios/Runner.xcodeproj/project.pbxproj
+**/ios/Runner/GoogleService-Info.plist 
 
 # Exceptions to above rules.
 !**/ios/**/default.mode1v3
