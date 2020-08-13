@@ -23,7 +23,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDfAFRAZvBwdGI0wX2bW9qZyc6JOICLHQY",
+          "current_key": "",
           //xxxxxxxxxxxx
         }
       ],
@@ -40,4 +40,4 @@
     }
   ],
   "configuration_version": "1" 
-}
+} 

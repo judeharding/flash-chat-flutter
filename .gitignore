@@ -37,6 +37,7 @@
 **/android/gradlew.bat
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
+
 #my additions
 **/android/app/google-services.json
 
