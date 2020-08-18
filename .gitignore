@@ -8,6 +8,8 @@
 .buildlog/
 .history
 .svn/
+#my additions
+android/app/
 
 # IntelliJ related
 *.iml
@@ -38,8 +40,7 @@
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
 
-#my additions
-android/app/google-services.json
+
 
 # iOS/XCode related
 **/ios/**/*.mode1v3
