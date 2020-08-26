@@ -77,6 +77,38 @@ class _ChatScreenState extends State<ChatScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            StreamBuilder<QuerySnapshot>(
+              //snapshot from firebase
+              stream: _firestore.collection('messages').snapshots(),
+              //snapshot returns a flutter widget
+              builder: (context, snapshot) {
+                if (!snapshot.hasData) {
+                  return Center(
+                    // spinner ONLY shows if no data available
+                    child: CircularProgressIndicator(
+                      backgroundColor: Colors.lightBlueAccent,
+                    ),
+                  );
+                }
+                // snapshot is async data from flutter and message is snapshot from firebase
+                final messages = snapshot.data.docs;
+                List<Text> messageWidgets = [];
+
+                for (var message in messages) {
+                  // final messageText = message.data['text'];
+                  // final messageSender = message.data['sender'];
+                  final messageText = message.data().values;
+                  final messageSender = message.data().values;
+
+                  final messageWidget =
+                      Text('$messageText from $messageSender');
+                  messageWidgets.add(messageWidget);
+                }
+                return Column(
+                  children: messageWidgets,
+                );
+              },
+            ),
             Container(
               decoration: kMessageContainerDecoration,
               child: Row(
