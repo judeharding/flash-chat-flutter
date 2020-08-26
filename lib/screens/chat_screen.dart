@@ -35,7 +35,7 @@ class _ChatScreenState extends State<ChatScreen> {
       print(e);
     }
   }
-
+// PULLING DATA
 //  void getMessages() async {
 //    //.getDocuments() has been depricated to .get()
 //    final messages = await _firestore.collection('messages').getDocuments();
@@ -45,6 +45,7 @@ class _ChatScreenState extends State<ChatScreen> {
 //    }
 //  }
 
+  // DATA PUSHED TO ME
   void messagesStream() async {
     await for (var snapshot in _firestore.collection('messages').snapshots()) {
       for (var message in snapshot.docs) {
